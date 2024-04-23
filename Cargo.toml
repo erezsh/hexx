@@ -149,3 +149,11 @@ harness = false
 
 [profile.dev]
 opt-level = 1
+
+
+# Enable high optimizations for dependencies (incl. Bevy)
+[profile.dev.package."*"]
+opt-level = 3
+
+[target.x86_64-pc-windows-msvc]
+linker = "rust-lld.exe"
